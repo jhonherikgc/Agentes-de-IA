@@ -1,0 +1,3 @@
+## Bibliotecas essenciais para rodar o código
+pip install -q --upgrade langchain langchain-google-genai google generativeai
+pip install -q -U google-genai
