@@ -1,3 +1,10 @@
 ## Bibliotecas essenciais para rodar o código
 pip install -q --upgrade langchain langchain-google-genai google generativeai
+
+pip install langchain-core
+
 pip install -q -U google-genai
+
+pip install pydantic
+
+pip install numpy sympy matplotlib
