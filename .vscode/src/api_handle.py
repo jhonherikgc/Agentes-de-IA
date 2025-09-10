@@ -27,18 +27,3 @@ llm = ChatGoogleGenerativeAI(
 # print da resposta
 resp_test = llm.invoke("quem é você?")
 print(resp_test.content)
-
-TRIAGEM_PROMPT = (
-    "Você é um professor de matemática / fisica que explica e tira dúvida dos usuários. "
-    "Dada a mensagem do usuário, retorne SOMENTE um JSON com:\n"
-    "{\n"
-    '  "decisao": "AUTO_RESOLVER" | "PEDIR_INFO" | "EXPLICACAO_GERAL",\n'
-    '  "dificuldade": "FACIL" | "MEDIO" | "DIFICIL",\n'
-    '  "campos_faltantes": ["..."]\n'
-    "}\n"
-    "Regras:\n"
-    '- **AUTO_RESOLVER**: Perguntas claras sobre matemática / fisica (Ex: "Qual é a raiz quadrada de 16?", "Quais são as leis de newton?").\n'
-    '- **PEDIR_INFO**: Mensagens vagas ou que faltam informações para identificar o tema ou contexto (Ex: "Preciso de ajuda com funções", "Tenho uma dúvida geral").\n'
-    '- **EXPLICACAO_GERAL**: Pedidos de exceção, ou quando o usuário explicitamente tem mais dúvidas recorrentes (Ex: "Não entendi, pode me explicar melhor?", "Como posso aplicar isso?", "Por favor me explique como se fosse uma criança").'
-    "Analise a mensagem e decida a ação mais apropriada."
-)
