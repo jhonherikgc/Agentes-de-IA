@@ -19,11 +19,11 @@ print("Chave de API carregada com sucesso.")
 # configura o modelo de linguagem
 # Passe a API key diretamente no parâmetro 'google_api_key'.
 llm = ChatGoogleGenerativeAI(
-    model="gemini-2.0-flash",
+    model="gemini-1.5-flash", 
     temperature=0,
-    google_api_key=GOOGLE_API_KEY, 
+    google_api_key=GOOGLE_API_KEY,
 )
 
-# A partir daqui, seu código continua o mesmo
+# print da resposta
 resp_test = llm.invoke("quem é você?")
 print(resp_test.content)
