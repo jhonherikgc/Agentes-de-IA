@@ -48,7 +48,8 @@ def triagem (mensagem: str) -> Dict:
 
 teste = ["Qual é a raiz quadrada de 16?",
     "Me explique funções matematicas.",
-    "Como funciona algebra Linear?"]
+    "Como funciona algebra Linear?",
+    "Quais são todos os ramos da matemática?"]
 
 for msg_teste in teste:
     print(f"Pergunta: {msg_teste}\n -> Resposta: {triagem(msg_teste)}\n ")
